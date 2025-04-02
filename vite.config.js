@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.glb'],
-  base: '/Portfolio/',  // Add this line for correct GitHub Pages deployment
+  base: '/Portfolio/', // Make sure this is set correctly for GitHub Pages
 });
