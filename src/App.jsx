@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom'; // ✅ Change BrowserRouter to HashRouter
 import Navbar from './components/Navbar';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -13,7 +13,7 @@ const UnderConstruction = lazy(() => import('./pages/UnderConstruction'));
 const App = () => {
   return (
     <main className='bg-slate-300/20 min-h-screen'>
-      <Router>
+      <Router> {/* ✅ Now using HashRouter */}
         <Navbar />
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
